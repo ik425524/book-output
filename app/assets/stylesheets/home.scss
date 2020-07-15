@@ -1,0 +1,49 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  height: 100%;
+  font-style: italic;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+.main-hedder {
+  display: flex;
+  justify-content: space-between;
+}
+.hedder-right {
+  display: flex;
+  text-align: right;
+  padding-top: 20px;
+}
+.hedder-btn {
+  margin-right: 10px;
+}
+.hedder-btn2 {
+  margin-right: 10px;
+}
+.main-contents {
+  background-image: url(hot-chocolate-and-a-book.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.main-contents2 {
+  background-image: url(hot-chocolate-and-a-book.jpg);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+h2.main-text {
+  padding-top: 100px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}

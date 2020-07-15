@@ -1,0 +1,44 @@
+// Place all the styles related to the texts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.my-parts {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+.my-parts::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.my-parts .my-parts-img img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  margin: 0;
+}
+.my-parts .my-parts-body {
+  width: 60%;
+  width: calc(100% - 100px);
+  padding: 0.4em;
+  box-sizing: border-box;
+  text-align: left;
+  float: left;
+}
+.my-parts .my-parts-body time {
+  color: #666;
+  font-size: 0.875em;
+  display: block;
+  text-align: right;
+}
+.my-parts .my-parts-title {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0.4em 0;
+}
+.my-parts .my-parts-body p {
+  font-size: 0.95em;
+  color: #666;
+  margin: 0;
+}

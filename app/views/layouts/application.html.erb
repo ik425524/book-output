@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <div class="main-hedder">
+  <h1 class="title">
+      <%= link_to "book-output",root_path %>
+  </h1>
+  </nav>
+  <div class="hedder-right">
+    <div class="hedder-btn"><a href="#">会員登録</a></div>
+    <div class="hedder-btn2"><a href="#">ログイン</a></div>
+    <div class="hedder-btn3">
+      <%= link_to "新規投稿",texts_new_path %></div>
+  </div>
+</div>
     <%= yield %>
   </body>
 </html>
