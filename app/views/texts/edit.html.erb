@@ -1,0 +1,11 @@
+<div class="main-contents2">
+  <h2>編集</h2>
+  <%= form_tag("/texts/#{@text.id}/update") do %>
+    <textarea name="title" class="show__title">
+      <%= @text.title %>
+    </textarea>
+    <textarea name="text" class="show__text">
+      <%= @text.text %>
+    </textarea>
+    <input type="submit" value="保存">
+  <% end %>

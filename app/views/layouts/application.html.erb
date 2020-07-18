@@ -4,24 +4,40 @@
     <title>BookOutput</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="main-hedder">
-  <h1 class="title">
-      <%= link_to "book-output",root_path %>
-  </h1>
-  </nav>
-  <div class="hedder-right">
-    <div class="hedder-btn"><a href="#">会員登録</a></div>
-    <div class="hedder-btn2"><a href="#">ログイン</a></div>
-    <div class="hedder-btn3">
-      <%= link_to "新規投稿",texts_new_path %></div>
+<body>
+  <div class="main-hedder">
+    <h1 class="title">
+        <%= link_to "book-output",root_path %>
+    </h1>
+    </nav>
+    <div class="hedder-right">
+      <% if user_signed_in? %>
+        <div class="hedder-btn">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </div>
+        <div class="hedder-btn3">
+          <%= link_to "新規投稿",texts_new_path %>
+        </div>
+       <% else %>
+        <div class="hedder-btn">
+          <%= link_to "ログイン", new_user_session_path %>
+        </div>
+        <div class="hedder-btn2">
+          <%= link_to "新規登録", new_user_registration_path %>
+        </div> 
+      <% end %>
+    </div>
   </div>
-</div>
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
     <%= yield %>
-  </body>
+</body>
 </html>
