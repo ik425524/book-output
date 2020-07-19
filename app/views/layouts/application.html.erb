@@ -22,13 +22,19 @@
         <div class="hedder-btn3">
           <%= link_to "新規投稿",texts_new_path %>
         </div>
+         <div class="hedder-btn4">
+          <%= link_to "一覧", texts_path %>
+        </div>
        <% else %>
         <div class="hedder-btn">
           <%= link_to "ログイン", new_user_session_path %>
         </div>
         <div class="hedder-btn2">
           <%= link_to "新規登録", new_user_registration_path %>
-        </div> 
+        </div>
+        <div class="hedder-btn4">
+          <%= link_to "一覧", texts_path %>
+        </div>
       <% end %>
     </div>
   </div>
