@@ -7,12 +7,14 @@
   <div class="show__text">
     <%= @text.text %>
   </div>
-  <div class="btn">
-    <div class="edit-btn">
-      <%= link_to("編集","/texts/#{@text.id}/edit")%>
-    </div>
-    <div class="delete-btn">
-      <%= link_to("削除","/texts/#{@text.id}/destroy",{method: "post"})%>
-    </div>
-  </div>
+    <% if user_signed_in? && current_user.id == @text.user_id %>
+      <div class="btn">
+        <div class="edit-btn">
+          <%= link_to("編集","/texts/#{@text.id}/edit")%>
+        </div>
+        <div class="delete-btn">
+          <%= link_to("削除","/texts/#{@text.id}/destroy",{method: "post"}) %>
+        </div>
+      </div>
+    <% end %>
 </div>

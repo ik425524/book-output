@@ -1,0 +1,2 @@
+module Texts::SearchesHelper
+end

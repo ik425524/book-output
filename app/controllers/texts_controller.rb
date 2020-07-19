@@ -1,7 +1,7 @@
 class TextsController < ApplicationController
 
   def index
-    @texts = Text.all.order(updated_at: :desc)
+    @texts = Text.all.order(updated_at: :desc).page(params[:page]).per(5)
   end
 
   def new
@@ -46,6 +46,11 @@ class TextsController < ApplicationController
     redirect_to texts_path
     @text = Text.find_by(id: params[:id])
     @text.destroy
+  end
+
+  private
+  def text_params
+    params.require(:text).permit(:title, :text).merge(user_id: current_user.id)
   end
 
 end
