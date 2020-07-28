@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: book-output_production
-  username: book-output
-  password: <%= ENV['BOOK-OUTPUT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # database: book-output_production
+  # username: book-output
+  # password: <%= ENV['BOOK-OUTPUT_DATABASE_PASSWORD'] %>
